@@ -1,19 +1,19 @@
 ---
 - name: plan
   terraform:
-    project_path: ''
+    project_path: 'https://github.com/ProfessionalTiger/Terraforms/blob/master/EC2.tf'
     plan_file: 'tfplan'
     lock: true
     state: planned
 
 - name: apply
   terraform:
-    project_path: '/var/gcp'
+    project_path: 'https://github.com/ProfessionalTiger/Terraforms/blob/master/EC2.tf'
     lock: true
     state: present
 
 - name: destroy
   terraform:
-    project_path: '/var/gcp'
+    project_path: 'https://github.com/ProfessionalTiger/Terraforms/blob/master/EC2.tf'
     lock: true
     state: absent
